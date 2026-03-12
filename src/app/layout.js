@@ -22,7 +22,25 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+        <nav className="border-b border-gray-800">
+          <div className="max-w-4xl mx-auto flex justify-between items-center p-4">
+            <h1 className="text-lg font-bold"> Documentacion Next </h1>
+
+            <div className="flex gap-4 text-zinc-400">
+              <a href="/" className="hover:text-white">Home</a>
+              <a href="/about" className="hover:text-white">About</a>
+              <a href="/blog" className="hover:text-white">Blog</a>
+            </div>
+          </div>
+        </nav>
+
         {children}
+
+        <footer className="border-t border-gray-800">
+          <p className="max-w-4xl mx-auto p-4 text-sm text-center text-zinc-500">© Valentino 2026</p>
+        </footer>
+
       </body>
     </html>
   );
